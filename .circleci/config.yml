@@ -13,7 +13,7 @@ jobs:
             - run: npm build
             - run: sudo apt-get install rsync && rsync --version
             - run: ls
-            - run: rsync -a -e "ssh -o StrictHostKeyChecking=no" src/ centos@54.82.112.85:~/home/centos/nodedeploy/
+            - run: rsync -a -e "ssh -o StrictHostKeyChecking=no" src/ centos@54.82.112.85:~/nodedeploy/
 workflows:
     build-and-deploy:
       jobs:
